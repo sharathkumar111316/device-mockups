@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components';
+import { Ios, Android } from './Phone'
+import CoursesImg from './Courses.png'
+import AlertImg from './Alert.png'
 
-function App() {
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: #181818;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;  
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Ios image = {CoursesImg}/>
+      <Android image = {AlertImg}/>
+    </Container>
   );
-}
+};
 
-export default App;
+export default App
